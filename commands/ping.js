@@ -5,4 +5,4 @@ exports.run = ((client, message, args) => {
 exports.help = {
   desc: 'Pings Sparken for a response.',
   use: 'ping'
-}
+};
