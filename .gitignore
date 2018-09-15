@@ -1,0 +1,8 @@
+# Dependencies
+/node_modules
+
+# Passwords
+/storage
+
+# IntelliJ IDE
+/.idea
