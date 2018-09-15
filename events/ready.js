@@ -1,10 +1,10 @@
 const config = require('../storage/config.json');
+const util = require('../shared/util');
 
 exports.run = ((client) => {
   console.log('Sparken is flying through the sky.');
-  client.fetchUser('191333046786588672', (user) => {
-    user.send(':heart:');
-  });
+
+  util.initialize(client);
 
   return;
 

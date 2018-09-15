@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client({ autoReconnect: true });
 
 const MongoClient = require('mongodb').MongoClient;
-const login = process.env.pl_login ? process.env.pl_login : require('./storage/passwords.json').login;
+const login = process.env.mlab_login ? process.env.mlab_login : require('./storage/passwords.json').login;
 const url = `mongodb://${login}@ds133152.mlab.com:33152/sparken_faq`;
 
 const fs = require('fs');
@@ -11,7 +11,7 @@ const token = process.env.token ? process.env.token : require('./storage/passwor
 MongoClient.connect(url, { useNewUrlParser: true }, (err, database) => {
     if (err) return console.log('Error connecting to database.');
 
-    client.database = database.db('questions');
+    client.database = database.db('sparken_faq');
 
     fs.readdir("./events/", (err, files) => {
         if (err) return console.error(err);

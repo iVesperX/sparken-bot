@@ -27,7 +27,7 @@ exports.run = ((client, message) => {
 
       message.channel.send(error_message);
 
-      client.fetchUser(config.bot_creator).then(user => {
+      client.fetchUser(config.bot_creatorID).then(user => {
         // user.send(e)
       })
     } else {
